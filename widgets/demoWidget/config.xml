@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget  xmlns="http://www.w3.org/ns/widgets"
+		 xmlns:JIL="http://www.jil.org/ns/widgets1.2"
+         id="http://jil.org/wid/d142bda3c12cdab2d45d2cf47617ec425ded55cd82b2a80d1f32089e3d419a/Toddler"
+		 version="1.0"
+         height="684"
+         width="480">
+    <icon src="Icon.png"/>
+    <content src="index.html"/>
+    <feature name="http://jil.org/jil/api/1.2/widget"/>
+    <name>Demo Widget</name>
+    <description>The Ripple Emulator Demo Widget</description>
+    <author email="dan.silivestru@tinyhippos.com">Dan Silivestru and Brent Lintner</author>
+    <license href="http://www.opensource.org/licenses/mit-license.php">MIT</license>
+    <JIL:access network="true" localfs="true" remote_scripts="false"/>
+    <JIL:maximum_display_mode height="684" width="480"/>
+    <JIL:billing required="false"/>
+</widget>

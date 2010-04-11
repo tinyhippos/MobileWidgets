@@ -1,0 +1,28 @@
+A repository for Mobile Widget developers containing helpful libraries as well as other sample code to assist in the development of cross-platform mobile widgets. The code in this repository is targeted mainly at developers seeking to build Mobile Widgets/Websites that are meant to work on multiple platform such as, but not limited to: 
+
+JIL Mobile Widgets
+Opera Mobile Widgets
+T-Mobile Mobile Widgets
+Nokia's WRT
+The mobile web for devices that support full web browsers
+
+Head on over to the Wiki to get more information.
+
+http://wiki.github.com/tinyhippos/MobileWidgets/
+
+
+
+--------- Attributions
+
+** Licensed Under (unless otherwise stated by thirdparty) **
+
+The MIT License
+http://www.opensource.org/licenses/mit-license.php
+
+Copyright (c) 2010 all contributors:
+
+Brent Lintner
+tinyHippos Inc.
+
+Dan Silivestru
+tinyHippos Inc.

@@ -1,0 +1,32 @@
+Common libraries for Mobile Widget/Website developers.
+
+v0.1 (master) - 04-10-2010
+	- Persistence library: supporting JIL 1.0 - 1.1, JIL 1.2.x, Opera Widgets, 
+	  HTML 5 mobile browsers, and other Mobile web browsers
+
+* Notes *
+
+Currently being developed and tested in Chrome using The Ripple Emulator (http://rippleemulator.com).
+The code presented here has also been tested on multiple mobile devices using Perfecto Mobile (http://perfectomobile.com)
+
+* Licensed Under *
+
+The MIT License (http://www.opensource.org/licenses/mit-license.php)
+
+Copyright (c) 2010 all contributors:
+
+Dan Silivestru
+tinyHippos Inc.
+
+Brent Lintner
+tinyHippos Inc.
+
+
+* Referenced Code *
+
+json
+http://www.json.org/json2.js
+
+jQuery
+http://jQuery.com/
+Lincensed under MIT/GPL, more license information for jQuery can be found here: http://jquery.org/license
