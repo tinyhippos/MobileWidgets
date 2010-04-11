@@ -24,10 +24,19 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="persistence.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="persistence.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/persistence.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="4" selection-start="37" selection-end="63" vertical-scroll-proportion="0.020316027">
+            <state line="3" column="19" selection-start="131" selection-end="147" vertical-scroll-proportion="-2.28">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="global.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/global.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="71" column="0" selection-start="811" selection-end="811" vertical-scroll-proportion="-402.0">
               <folding />
             </state>
           </provider>
@@ -54,7 +63,7 @@
       <file leaf-file-name="Main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="196" selection-end="196" vertical-scroll-proportion="-90.0">
+            <state line="14" column="9" selection-start="210" selection-end="210" vertical-scroll-proportion="-105.0">
               <folding />
             </state>
           </provider>
@@ -78,10 +87,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="layout.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/layout.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="4" selection-start="46" selection-end="46" vertical-scroll-proportion="-45.0">
+            <state line="54" column="0" selection-start="568" selection-end="568" vertical-scroll-proportion="0.8910891">
               <folding />
             </state>
           </provider>
@@ -99,7 +108,7 @@
       <file leaf-file-name="Routes.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="403" selection-end="403" vertical-scroll-proportion="-126.0">
+            <state line="1" column="0" selection-start="36" selection-end="36" vertical-scroll-proportion="-9.0">
               <folding />
             </state>
           </provider>
@@ -121,13 +130,14 @@
         <option value="$PROJECT_DIR$/html/index.html" />
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/js/Persistence.js" />
-        <option value="$PROJECT_DIR$/css/layout.css" />
         <option value="$PROJECT_DIR$/js/Console.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/Exception.js" />
         <option value="$PROJECT_DIR$/js/Main.js" />
         <option value="$PROJECT_DIR$/js/Routes.js" />
         <option value="$PROJECT_DIR$/html/persistence.html" />
+        <option value="$PROJECT_DIR$/css/global.css" />
+        <option value="$PROJECT_DIR$/css/layout.css" />
       </list>
     </option>
   </component>
@@ -329,11 +339,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/images/bg.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Icon.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -363,13 +368,6 @@
     <entry file="file://$PROJECT_DIR$/js/thirdparty/jquery-1.4.2.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="2" selection-start="184" selection-end="184" vertical-scroll-proportion="0.016835017">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/layout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="46" selection-end="46" vertical-scroll-proportion="-45.0">
           <folding />
         </state>
       </provider>
@@ -416,23 +414,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Main.js">
+    <entry file="file://$PROJECT_DIR$/js/Routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="196" selection-end="196" vertical-scroll-proportion="-90.0">
+        <state line="1" column="0" selection-start="36" selection-end="36" vertical-scroll-proportion="-9.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Routes.js">
+    <entry file="file://$PROJECT_DIR$/js/Main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="403" selection-end="403" vertical-scroll-proportion="-126.0">
+        <state line="14" column="9" selection-start="210" selection-end="210" vertical-scroll-proportion="-105.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/html/persistence.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="4" selection-start="37" selection-end="63" vertical-scroll-proportion="0.020316027">
+        <state line="3" column="19" selection-start="131" selection-end="147" vertical-scroll-proportion="-2.28">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/global.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="0" selection-start="811" selection-end="811" vertical-scroll-proportion="-402.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="0" selection-start="568" selection-end="568" vertical-scroll-proportion="0.8910891">
           <folding />
         </state>
       </provider>

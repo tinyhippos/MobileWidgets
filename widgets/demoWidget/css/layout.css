@@ -17,7 +17,7 @@
 #container{
 	z-index: 400;
 	height: 80%;
-	padding: 0em .6em;
+	padding: 0 .6em;
 	text-transform: capitalize;
 	position: relative;
 	text-align: center;
@@ -31,7 +31,7 @@
 
 .footer{
 	position: relative;
-	bottom: 0em;
+	bottom: 0;
 	width: 100%;
 	height: 10%;
 }
@@ -46,4 +46,9 @@
 	height: 10%;
 	position: relative;
 	text-align: center;
+}
+
+#persistenceTable {
+	width: 70%;
+	margin: 0 auto;
 }
