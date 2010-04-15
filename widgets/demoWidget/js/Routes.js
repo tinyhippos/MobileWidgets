@@ -21,6 +21,12 @@
 					jQuery("#persistenceResult").removeClass("irrelevant");
 				});
 
+			},
+
+			"events.html": function() {
+				Widget.onWakeup = function() {
+					alert("onWakeup event was fired!");
+				}
 			}
 		};
 
