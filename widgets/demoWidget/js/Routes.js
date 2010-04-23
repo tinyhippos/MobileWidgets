@@ -7,26 +7,76 @@
 
 				$.Routes.clearHistory();
 
+				$.UI.setLeftNav()
+					.setTitle("Ripple Demo")
+					.setRightNav();
+
 			},
 
 			"persistence.html": function(){
 
-				jQuery("#persistenceSaveButton").mousedown(function() {
-					$.Persistence.save(jQuery("#persistenceKey")[0].value, jQuery("#persistenceValue")[0].value);
-					jQuery("#persistenceResult").removeClass("irrelevant");
-				});
+				var saveMethod = function() {
+						$.Persistence.save(jQuery("#persistenceKey")[0].value, jQuery("#persistenceValue")[0].value);
+						jQuery("#persistenceResult").removeClass("irrelevant");
+					},
+					deleteMethod = function() {
+						$.Persistence.remove(jQuery("#persistenceKey")[0].value);
+						jQuery("#persistenceResult").removeClass("irrelevant");
+					};
 
-				jQuery("#persistenceDeleteButton").mousedown(function() {
-					$.Persistence.remove(jQuery("#persistenceKey")[0].value);
-					jQuery("#persistenceResult").removeClass("irrelevant");
-				});
+				$.UI.setLeftNav("Back")
+					.setRightNav();
+	
+				jQuery("#persistenceSaveButton")
+					.unbind("mousedown", saveMethod)
+					.mousedown(saveMethod);
+
+				jQuery("#persistenceDeleteButton")
+					.unbind("mousedown", deleteMethod)
+					.mousedown(deleteMethod);
 
 			},
 
 			"events.html": function() {
-				Widget.onWakeup = function() {
-					alert("onWakeup event was fired!");
+
+				function notifyEventWasCalled(eventName) {
+						var eventDiv = jQuery("#eventResult"),
+							eventResultDiv;
+
+						if (eventDiv) {
+							
+							eventResultDiv = eventDiv.children("#eventResultInfo")
+							eventDiv
+								.show(0, function() {
+									eventResultDiv.html("Widget." + eventName + " was fired and successfully captured!");								
+								})
+								.delay(5000)
+								.hide(0, function() {
+									eventResultDiv.html("");	
+								});
+						}
+										
+					};
+
+				$.UI.setLeftNav("Back")
+					.setRightNav();
+
+				Widget.onMaximize = function() {
+					notifyEventWasCalled("onMaximize");
 				}
+				
+				Widget.onWakeup = function() {
+					notifyEventWasCalled("onWakeup");
+				}
+				
+				Widget.onFocus = function() {
+					notifyEventWasCalled("onFocus");
+				}
+				
+				Widget.onRestore = function() {
+					notifyEventWasCalled("onRestore");
+				}
+				
 			}
 		};
 

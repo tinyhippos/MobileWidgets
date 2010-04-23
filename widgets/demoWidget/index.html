@@ -4,8 +4,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Demo Widget</title>
 
-		<link rel="stylesheet" type="text/css" href="css/global.css"/>
-		<link rel="stylesheet" type="text/css" href="css/layout.css"/>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
 
         <script type="text/javascript">
 
@@ -20,6 +19,7 @@
 
 		<script type="text/javascript" src="js/Main.js"></script>
 		<script type="text/javascript" src="js/Routes.js"></script>
+		<script type="text/javascript" src="js/Constants.js"></script>
 		<script type="text/javascript" src="js/UI.js"></script>
 		<script type="text/javascript" src="js/Persistence.js"></script>
 		<script type="text/javascript" src="js/Copy.js"></script>
@@ -30,15 +30,25 @@
 	</head>
 	<body>
 
-		<div id="layout">
+		<div class="layout">
 
-			<div class="header">Ripple Emulator Demo Widget</div>
+			<div class="header">
 
-			<div id="container">
+				<div class="nav_left">
+					<div class="link"><a id="nav_left"></a></div>
+				</div>
+
+				<div class="nav_right nav_right_small">
+					<div class="link"><a id="nav_right"></a></div>
+				</div>
+
+				<h1>&nbsp;</h1>
+
 			</div>
 
-			<div class="footer"></div>
+			<div class="view"></div>
 
 		</div>
+
 	</body>
 </html>
