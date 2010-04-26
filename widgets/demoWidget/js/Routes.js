@@ -8,7 +8,14 @@
 				$.Routes.clearHistory();
 
 				$.UI.setLeftNav()
-					.setTitle("Ripple Demo")
+					.setTitle("Demo")
+					.setRightNav();
+
+			},
+
+			"platforms.html": function(){
+
+				$.UI.setLeftNav("Back")
 					.setRightNav();
 
 			},
@@ -40,42 +47,42 @@
 			"events.html": function() {
 
 				function notifyEventWasCalled(eventName) {
-						var eventDiv = jQuery("#eventResult"),
-							eventResultDiv;
+					var eventDiv = jQuery("#eventResult"),
+						eventResultDiv;
 
-						if (eventDiv) {
-							
-							eventResultDiv = eventDiv.children("#eventResultInfo")
-							eventDiv
-								.show(0, function() {
-									eventResultDiv.html("Widget." + eventName + " was fired and successfully captured!");								
-								})
-								.delay(5000)
-								.hide(0, function() {
-									eventResultDiv.html("");	
-								});
-						}
-										
-					};
+					if (eventDiv) {
+
+						eventResultDiv = eventDiv.children("#eventResultInfo")
+						eventDiv
+							.show(0, function() {
+								eventResultDiv.html("Widget." + eventName + " was fired and successfully captured!");
+							})
+							.delay(5000)
+							.hide(0, function() {
+								eventResultDiv.html("");
+							});
+					}
+
+				}
 
 				$.UI.setLeftNav("Back")
 					.setRightNav();
 
 				Widget.onMaximize = function() {
 					notifyEventWasCalled("onMaximize");
-				}
+				};
 				
 				Widget.onWakeup = function() {
 					notifyEventWasCalled("onWakeup");
-				}
+				};
 				
 				Widget.onFocus = function() {
 					notifyEventWasCalled("onFocus");
-				}
+				};
 				
 				Widget.onRestore = function() {
 					notifyEventWasCalled("onRestore");
-				}
+				};
 				
 			}
 		};
