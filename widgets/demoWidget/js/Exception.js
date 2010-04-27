@@ -5,7 +5,7 @@
 		types: {
 			ArgumentLength: "ArgumentLength",
 			ArgumentType: "ArgumentType",
-			Argument: "Argument", 
+			Argument: "Argument",
 			DomObjectNotFound: "DomObjectNotFound",
 			MethodNotImplemented: "MethodNotImplemented",
 			InvalidState: "InvalidState",
@@ -20,7 +20,7 @@
 
 			reThrow = reThrow || false;
 
-            // TODO: find out why jsUnity stops running if line below is deleted
+			// TODO: find out why jsUnity stops running if line below is deleted
 			$.Utils.validateMultipleArgumentTypes(arguments, ['object', 'boolean']);
 
 			var eMsg = exception.message || "exception caught!",

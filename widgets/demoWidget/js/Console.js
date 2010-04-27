@@ -6,7 +6,7 @@
 
 
 	var _buffer = "",
-			_options = {
+		_options = {
 			"append": "append"
 		};
 
@@ -53,7 +53,7 @@
 			this.bufferLog(msg, options, "log");
 		},
 
-         /*
+		/*
 		 * Public Method:
 		 * Purpose:
 		 */

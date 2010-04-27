@@ -14,22 +14,22 @@
 			for (var attr in attributes){
 
 				if(attributes.hasOwnProperty(attr)){
-					
+
 					switch (attr.toLowerCase()){
 
 						case "innerhtml":
-						d.innerHTML = attributes[attr];
-						break;
+							d.innerHTML = attributes[attr];
+							break;
 
 						case "innertext":
-						d.innerText = attributes[attr];
-						break;
+							d.innerText = attributes[attr];
+							break;
 
 						default:
-						d.setAttribute(attr,attributes[attr]);
-						
+							d.setAttribute(attr,attributes[attr]);
+
 					}
-					
+
 				}
 
 			}
@@ -59,7 +59,7 @@
 
 		validateArgumentType: function (arg, argType){
 			var invalidArg = false;
-			
+
 			switch (argType) {
 				case "array":
 					if (!arg instanceof Array){ invalidArg = true; }
@@ -69,7 +69,7 @@
 					break;
 				default:
 					if (typeof arg !== argType){ invalidArg = true; }
-				break;
+					break;
 			}
 			if(invalidArg) {
 				$.Exception.raise($.Exception.types.ArgumentType, "Invalid Argument type. argument: " + arg + " ==> was expected to be of type: " + argType);

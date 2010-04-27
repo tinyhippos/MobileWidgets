@@ -1,8 +1,8 @@
 (Demo.Constants = {
-	
-    "css": {
-        "irrelevant": "irrelevant"
-    },
+
+	"css": {
+		"irrelevant": "irrelevant"
+	},
 
 	"common": {
 		"view": ".view",

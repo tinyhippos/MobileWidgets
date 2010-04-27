@@ -106,7 +106,7 @@
 
 				if(!view){
 
-                    // if im going back I need to remove myself first
+					// if im going back I need to remove myself first
 					_history.pop();
 
 					var lastView = _history.pop();
