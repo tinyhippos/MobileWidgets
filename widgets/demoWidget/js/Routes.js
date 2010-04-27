@@ -48,7 +48,6 @@
 					// callback to update map info
 					function updateMap(positionInfo){
 
-						console.log(positionInfo);
 						var point = new GLatLng(positionInfo.latitude, positionInfo.longitude);
 
 						map.setCenter(point, 13);
