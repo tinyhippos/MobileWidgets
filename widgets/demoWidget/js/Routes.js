@@ -16,7 +16,55 @@
 			"platforms.html": function(){
 
 				$.UI.setLeftNav("Back")
-					.setRightNav();
+					.setRightNav("Home", "index.html");
+
+			},
+
+			"infopane.html": function(){
+
+				$.UI.setLeftNav("Back")
+					.setRightNav("Home", "index.html");
+
+			},
+
+			"config.html": function(){
+
+				$.UI.setLeftNav("Back")
+					.setRightNav("Home", "index.html");
+
+			},
+
+			"gps.html": function(){
+
+				$.UI.setLeftNav("Back")
+					.setRightNav("Home", "index.html");
+					
+				if (GBrowserIsCompatible()) {
+					var map = new GMap2(document.getElementById("map_canvas")),
+						point = new GLatLng(lat, ln);
+
+
+					function update(){
+					}
+					
+
+					Widget.Device.DeviceStateInfo.onPositionRetrieved = function (){
+						
+					}
+
+					map.setCenter(point, 13);
+
+					// Add 10 markers to the map at random locations
+					//var bounds = map.getBounds();
+					//var southWest = bounds.getSouthWest();
+					//var northEast = bounds.getNorthEast();
+					//var lngSpan = northEast.lng() - southWest.lng();
+					//var latSpan = northEast.lat() - southWest.lat();
+
+					map.addOverlay(new GMarker(point));
+
+					map.setUIToDefault();
+				}
 
 			},
 
@@ -32,7 +80,7 @@
 					};
 
 				$.UI.setLeftNav("Back")
-					.setRightNav();
+					.setRightNav("Home", "index.html");
 	
 				jQuery("#persistenceSaveButton")
 					.unbind("mousedown", saveMethod)
@@ -66,7 +114,7 @@
 				}
 
 				$.UI.setLeftNav("Back")
-					.setRightNav();
+					.setRightNav("Home", "index.html");
 
 				Widget.onMaximize = function() {
 					notifyEventWasCalled("onMaximize");

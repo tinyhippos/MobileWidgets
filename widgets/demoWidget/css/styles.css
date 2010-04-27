@@ -38,6 +38,11 @@
         outline: none;
         text-decoration: underline;
         cursor: pointer;
+        color: #1E1E1E;
+    }
+
+    a:hover {
+		text-decoration: none;
     }
 
     img {  border: 0; margin: 0; padding: 0; }
@@ -227,4 +232,13 @@
         border-radius: 5px;
         margin: 2em 1em 0 1em;
         padding: 1em;
+	}
+
+		
+	/************** Wizard CSS **************/
+
+	.epic-wizard {
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
 	}
