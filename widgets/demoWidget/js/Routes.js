@@ -40,30 +40,35 @@
 					.setRightNav("Home", "index.html");
 					
 				if (GBrowserIsCompatible()) {
-					var map = new GMap2(document.getElementById("map_canvas")),
-						point = new GLatLng(lat, ln);
-
-
-					function update(){
-					}
 					
-
-					Widget.Device.DeviceStateInfo.onPositionRetrieved = function (){
-						
-					}
-
-					map.setCenter(point, 13);
-
-					// Add 10 markers to the map at random locations
-					//var bounds = map.getBounds();
-					//var southWest = bounds.getSouthWest();
-					//var northEast = bounds.getNorthEast();
-					//var lngSpan = northEast.lng() - southWest.lng();
-					//var latSpan = northEast.lat() - southWest.lat();
-
-					map.addOverlay(new GMarker(point));
+					var map = new GMap2(document.getElementById("map_canvas"));
 
 					map.setUIToDefault();
+
+					// callback to update map info
+					function updateMap(positionInfo){
+
+						console.log(positionInfo);
+						var point = new GLatLng(positionInfo.latitude, positionInfo.longitude);
+
+						map.setCenter(point, 13);
+
+						map.clearOverlays();
+
+						map.addOverlay(new GMarker(point));
+
+					}					
+
+					// Register for JIL callback
+					Widget.Device.DeviceStateInfo.onPositionRetrieved = updateMap;
+
+					Widget.Device.DeviceStateInfo.requestPositionInfo("gps");
+
+					jQuery("#refreshMapButton").bind("mousedown", function () {
+						Widget.Device.DeviceStateInfo.requestPositionInfo("gps");
+					});
+					
+
 				}
 
 			},
