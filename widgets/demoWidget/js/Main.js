@@ -7,8 +7,13 @@ var Demo = {};
 	return {
 
 		initialize: function(){
-			$.Persistence.detect();
-			$.Routes.navigate("index.html");
+			try {
+				$.Persistence.detect();
+				$.Routes.navigate("index.html");
+			}
+			catch (e) {
+				alert (e.message);
+			}
 		}
 	};
 

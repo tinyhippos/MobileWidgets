@@ -19,7 +19,7 @@
 		_currentPersistence;
 
 	function _sanitizeReturnedValue(value){
-		if(value === null || value === undefined || value === ''){
+		if(value === null || value === undefined || value == ''){
 			return null;
 		}
 		else {
@@ -158,11 +158,11 @@
 			if(window && window.Widget){
 				Widget.setPreferenceForKey("tinyHippos_key", "tinyHippos_value");
 
-				if(Widget.preferenceForKey("tinyHippos_key") === "tinyHippos_value"){
+				if(Widget.preferenceForKey("tinyHippos_key") == "tinyHippos_value"){
 					_currentPersistence = _persistenceTypes.Widget_1_0;
 					Widget.setPreferenceForKey("tinyHippos_key", null);
 				}
-				else if (Widget.preferenceForKey("tinyHippos_value") === "tinyHippos_key") {
+				else if (Widget.preferenceForKey("tinyHippos_value") == "tinyHippos_key") {
 					_currentPersistence = _persistenceTypes.Widget_1_2_1;
 					Widget.setPreferenceForKey(null, "tinyHippos_value");
 				}

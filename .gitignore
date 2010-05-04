@@ -1,2 +1,4 @@
-.idea/*
-widgets/demoWidget/.idea/*
+.idea/
+.project
+.settings/
+bin/

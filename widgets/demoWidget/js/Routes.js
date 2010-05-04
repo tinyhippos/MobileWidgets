@@ -1,5 +1,6 @@
 (Demo.Routes = function($, jQuery){
 
+	// ----- Private Vars -----
 	var _history = [],
 		_routes = {
 
@@ -31,6 +32,21 @@
 
 				$.UI.setLeftNav("Back")
 					.setRightNav("Home", "index.html");
+
+			},
+
+			"orientation.html": function(){
+
+				$.UI.setLeftNav("Back")
+					.setRightNav("Home", "index.html");
+
+				function captureScreenDimensionChange(width, height) {
+					var message = "JIL :: onScreenChangeDimensions was called. <br />" +
+									"Width ==> " + width + " Height ==> " + height;
+					_notifyEventWasCalled(message);
+				}
+				
+				Widget.Device.DeviceStateInfo.onScreenChangeDimensions = captureScreenDimensionChange;
 
 			},
 
@@ -98,47 +114,51 @@
 
 			"events.html": function() {
 
-				function notifyEventWasCalled(eventName) {
-					var eventDiv = jQuery("#eventResult"),
-						eventResultDiv;
-
-					if (eventDiv) {
-
-						eventResultDiv = eventDiv.children("#eventResultInfo")
-						eventDiv
-							.show(0, function() {
-								eventResultDiv.html("Widget." + eventName + " was fired and successfully captured!");
-							})
-							.delay(5000)
-							.hide(0, function() {
-								eventResultDiv.html("");
-							});
-					}
-
-				}
+				var message = " was fired and successfully captured!";
 
 				$.UI.setLeftNav("Back")
 					.setRightNav("Home", "index.html");
 
 				Widget.onMaximize = function() {
-					notifyEventWasCalled("onMaximize");
+					_notifyEventWasCalled("Widget.onMaximize" + message);
 				};
 				
 				Widget.onWakeup = function() {
-					notifyEventWasCalled("onWakeup");
+					_notifyEventWasCalled("Widget.onWakeup" + message);
 				};
 				
 				Widget.onFocus = function() {
-					notifyEventWasCalled("onFocus");
+					_notifyEventWasCalled("Widget.onFocus" + message);
 				};
 				
 				Widget.onRestore = function() {
-					notifyEventWasCalled("onRestore");
+					_notifyEventWasCalled("Widget.onRestore" + message);
 				};
 				
 			}
 		};
 
+	// ----- Private Methods -----
+	function _notifyEventWasCalled(message) {
+		var eventDiv = jQuery("#eventResult"),
+			eventResultDiv;
+
+		if (eventDiv.length > 0) {
+
+			eventResultDiv = eventDiv.children("#eventResultInfo");
+			eventDiv
+				.show(0, function() {
+					eventResultDiv.html(message);
+				})
+				.delay(5000)
+				.hide(0, function() {
+					eventResultDiv.html("");
+				});
+		}
+
+	}
+
+	// ----- Public Properties -----
 	return {
 
 		load: function(view){
