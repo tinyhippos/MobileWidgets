@@ -147,7 +147,7 @@
 			$.Utils.validateArgumentType(prefix, "string");
 		}
 
-		return prefix || "tinyhippos-";
+		return prefix || "";
 	}
 
 	// Public properties/methods

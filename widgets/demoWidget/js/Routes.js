@@ -1,5 +1,10 @@
 (Demo.Routes = function($, jQuery){
 
+	function _setNavBackAndHome(){
+		$.UI.setLeftNav("Back")
+			.setRightNav("Home", "index.html");
+	}
+
 	// ----- Private Vars -----
 	var _history = [],
 		_routes = {
@@ -15,30 +20,41 @@
 			},
 
 			"platforms.html": function(){
+				_setNavBackAndHome();
+			},
 
-				$.UI.setLeftNav("Back")
-					.setRightNav("Home", "index.html");
+			"applications.html": function(){
+
+				var i,
+					appSelect = jQuery("#launchApplicationsSelect"),
+					applications = Widget.Device.getAvailableApplications();
+
+				_setNavBackAndHome();
+
+				for(i = 0; i < applications.length; i++) {
+					appSelect.append($.Utils.createElement("option", {
+						"value": applications[i],
+						"innerText": applications[i]
+					}));
+				}
+
+				jQuery("#launchApplicationButton").bind("mousedown", function() {
+					Widget.Device.launchApplication(appSelect.val());
+				});
 
 			},
 
 			"infopane.html": function(){
-
-				$.UI.setLeftNav("Back")
-					.setRightNav("Home", "index.html");
-
+				_setNavBackAndHome();
 			},
 
 			"config.html": function(){
-
-				$.UI.setLeftNav("Back")
-					.setRightNav("Home", "index.html");
-
+				_setNavBackAndHome();
 			},
 
 			"orientation.html": function(){
 
-				$.UI.setLeftNav("Back")
-					.setRightNav("Home", "index.html");
+				_setNavBackAndHome();
 
 				function captureScreenDimensionChange(width, height) {
 					var message = "JIL :: onScreenChangeDimensions was called. <br />" +
@@ -52,8 +68,7 @@
 
 			"gps.html": function(){
 
-				$.UI.setLeftNav("Back")
-					.setRightNav("Home", "index.html");
+				_setNavBackAndHome();
 					
 				if (GBrowserIsCompatible()) {
 					
@@ -90,25 +105,17 @@
 
 			"persistence.html": function(){
 
-				var saveMethod = function() {
-						$.Persistence.save(jQuery("#persistenceKey")[0].value, jQuery("#persistenceValue")[0].value);
-						jQuery("#persistenceResult").removeClass("irrelevant");
-					},
-					deleteMethod = function() {
-						$.Persistence.remove(jQuery("#persistenceKey")[0].value);
-						jQuery("#persistenceResult").removeClass("irrelevant");
-					};
-
-				$.UI.setLeftNav("Back")
-					.setRightNav("Home", "index.html");
+				_setNavBackAndHome();
 	
-				jQuery("#persistenceSaveButton")
-					.unbind("mousedown", saveMethod)
-					.mousedown(saveMethod);
+				jQuery("#persistenceSaveButton").bind("mousedown", function() {
+					$.Persistence.save(jQuery("#persistenceKey")[0].value, jQuery("#persistenceValue")[0].value);
+					jQuery("#persistenceResult").removeClass("irrelevant");
+				});
 
-				jQuery("#persistenceDeleteButton")
-					.unbind("mousedown", deleteMethod)
-					.mousedown(deleteMethod);
+				jQuery("#persistenceDeleteButton").bind("mousedown", function() {
+					$.Persistence.remove(jQuery("#persistenceKey")[0].value);
+					jQuery("#persistenceResult").removeClass("irrelevant");
+				});
 
 			},
 
@@ -116,8 +123,7 @@
 
 				var message = " was fired and successfully captured!";
 
-				$.UI.setLeftNav("Back")
-					.setRightNav("Home", "index.html");
+				_setNavBackAndHome();
 
 				Widget.onMaximize = function() {
 					_notifyEventWasCalled("Widget.onMaximize" + message);
