@@ -12,12 +12,12 @@
 }
 
 #container{
-    height: 100%;
+    padding: 1em;
     text-align: center;
+    background-color: #FFFFFF;
 }
 
 #containerWrapper{
-    padding: 1em;
     height: 80%;
     text-align: left;
     clear: both;
