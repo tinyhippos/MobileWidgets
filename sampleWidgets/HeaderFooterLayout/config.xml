@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget  xmlns="http://www.w3.org/ns/widgets"
+          xmlns:JIL="http://www.jil.org/ns/widgets1.2"
+         xmlns:its="http://www.w3.org/2005/11/its"
+         id="http://jil.org/wid/42d5a18589a14d1990f6b0ba0451fbaaabbd033d3537a1c4e30c81432d20d791/Header+and+Footer+layout+example+widget"
+         version="1.0"
+         height="684"
+         width="480">
+    <JIL:access network="false" localfs="false" remote_scripts="false"/>
+    <JIL:billing required="false"/>
+    <icon src="Icon.png"/>
+    <content src="index.html"/>
+    <name>Header and Footer layout example widget</name>
+    <description>Shows how a widget can be layed out with a header pinned to the top and a footer pinned to the bottom without using position:fixed</description>
+    <license  href="http://www.opensource.org/licenses/mit-license.php">MIT</license>
+    <author  email="dan.silivestru@tinyhippos.com">Dan Silivestru and Brent Lintner</author>
+</widget>
