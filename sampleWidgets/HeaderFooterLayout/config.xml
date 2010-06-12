@@ -2,7 +2,7 @@
 <widget  xmlns="http://www.w3.org/ns/widgets"
           xmlns:JIL="http://www.jil.org/ns/widgets1.2"
          xmlns:its="http://www.w3.org/2005/11/its"
-         id="http://jil.org/wid/42d5a18589a14d1990f6b0ba0451fbaaabbd033d3537a1c4e30c81432d20d791/Header+and+Footer+layout+example+widget"
+         id="http://jil.org/wid/bc1bcff402d9657b4a88f12710fad7c21e1a7d0b59d19205f0822628cf9401cb/Header+and+Footer+layout+example+widget"
          version="1.0"
          height="684"
          width="480">
