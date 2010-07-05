@@ -1,4 +1,25 @@
 /*
+* Added Media-Query support for Low resolution Nokia (I.E N95,E65…)
+*/
+@media all and (min-resolution: 96dpi) {
+
+    /* Here you can specify your own classes and attributes */
+    body, html {
+        font-size: 1.0em;
+    }
+}
+
+/*
+* Added Media-Query support for Medium resolution Nokia (I.E N97,Nokia 5800…)
+*/
+@media all and (min-resolution: 200dpi) {
+
+    /* Here you can specify your own classes and attributes */
+    body, html {
+        font-size: 1.25em;
+    }
+}
+/*
 * Global resets
 */
 html, body{
