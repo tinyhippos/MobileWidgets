@@ -1,39 +1,52 @@
-/*
-* Added Media-Query support for Low resolution Nokia (I.E N95,E65…)
-*/
-@media all and (min-resolution: 96dpi) {
-
-    /* Here you can specify your own classes and attributes */
-    body, html {
-        font-size: 1.0em;
-    }
-}
-
-/*
-* Added Media-Query support for Medium resolution Nokia (I.E N97,Nokia 5800…)
-*/
-@media all and (min-resolution: 200dpi) {
-
-    /* Here you can specify your own classes and attributes */
-    body, html {
-        font-size: 1.25em;
-    }
-}
-/*
-* Global resets
-*/
+/* resets and font sizing */
 html, body{
     margin: 0;
     padding: 0;
     border: 0;
     width: 100%;
     height: 100%;
-    background-color: #FFFFFF;
 }
 
-/*
-* Main Layout
-*/
+body {
+    background-color: #FFFFFF;
+    font-size: 1em;    
+}
+
+@media all and (min-resolution: 50dpi) {
+    body {
+        font-size: 0.88em;
+    }
+}
+
+/* Added Media-Query support for Low resolution Nokia (I.E N95,E65…) */
+@media all and (min-resolution: 96dpi) {
+    /* Here you can specify your own classes and attributes */
+    body {
+        font-size: 1.0em;
+    }
+}
+
+@media all and (min-resolution: 145dpi) {
+    body {
+        font-size: 1.13em;
+    }
+}
+
+/* Added Media-Query support for Medium resolution Nokia (I.E N97,Nokia 5800…) */
+@media all and (min-resolution: 200dpi) {
+    body {
+        font-size: 1.25em;
+    }
+}
+
+/* includes Nexus One (JIL reports ~240dpi vs 252 to spec) */
+@media all and (min-resolution: 240dpi) {
+    body {
+        font-size: 1.5em;
+    }
+}
+
+/* Main Layout */
 #layout{
     background-color: #FFFFFF;
     color: #000000;
@@ -56,9 +69,7 @@ html, body{
 }
 
 
-/*
-* Header
-*/
+/* Header */
 .header{
     background-color: #444444;
     color: #FFFFFF;
@@ -71,9 +82,7 @@ html, body{
     text-align: center;
 }
 
-/*
-* Footer
-*/
+/* Footer */
 .footer{
     background-color: #444444;
     color: #FFFFFF;
