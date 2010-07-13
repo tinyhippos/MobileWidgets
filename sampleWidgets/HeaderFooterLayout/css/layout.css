@@ -80,7 +80,6 @@ body {
 }
 
 .header-text{
-    padding-top: .2em;
     display: table-cell;
     text-align: center;
     vertical-align: middle;
@@ -98,7 +97,6 @@ body {
 }
 
 .footer-text{
-    padding-top: .2em;
     text-align: center;
     display: table-cell;
     vertical-align: middle;
