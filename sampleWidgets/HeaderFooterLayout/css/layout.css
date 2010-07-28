@@ -63,7 +63,7 @@ body {
 }
 
 #containerWrapper{
-    height: 80%;
+    height: 76%;
     background-color: #DDDDDD;
     overflow: auto;
 }
@@ -73,23 +73,37 @@ body {
 .header{
     background-color: #444444;
     color: #FFFFFF;
-    height: 10%;
+    height: 12%;
     position: relative;
     display: table;
     width: 100%;
 }
 
-.header-text{
+.header-left{
+    height: 100%;
+    margin-left: 3em;
     display: table-cell;
-    text-align: center;
     vertical-align: middle;
+    text-align: center;
+}
+
+.header-right{
+    height: 100%;
+    margin-right: 3em;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.button {
+    width: 5em;
 }
 
 /* Footer */
 .footer{
     background-color: #444444;
     color: #FFFFFF;
-    height: 10%;
+    height: 12%;
     position: absolute;
     bottom: 0;
     width: 100%;
