@@ -1,0 +1,31 @@
+body {
+	background-color: #333333;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	width: 100%:
+}
+
+.layout {
+	text-align: center;
+	width: 100%;
+}
+
+#battery-container {
+	height: 75px;
+	width: 50px;
+	margin: 50px auto 0 auto;
+	background-color: #EEEEEE;
+	position: relative;
+}
+
+#battery-level {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+#battery-charge-text {
+	margin-top: 5px;
+}
+
