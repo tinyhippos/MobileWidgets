@@ -96,6 +96,8 @@ body {
 }
 
 .button {
+    background-color: #e1e1e1;
+    color: #1e1e1e;
     width: 5em;
 }
 
