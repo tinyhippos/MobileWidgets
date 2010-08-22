@@ -22,7 +22,9 @@ var nameSpace = nameSpace || {};
 
         if(typeof callback === "function") {
             xhr.onreadystatechange = function() {
-                callback("XHR");
+                if(xhr.readyState === 4) {
+                    callback("XHR");
+                }
             }
         }
 
