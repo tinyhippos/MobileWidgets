@@ -1,7 +1,7 @@
 var nameSpace = nameSpace || {};
 
 (nameSpace.CreateNetworkManager = function (jQuery){
-    var url = "http://www.google.com";
+    var url = "http://rippledocs.tinyhippos.com";
 
     var callback = null;
 
