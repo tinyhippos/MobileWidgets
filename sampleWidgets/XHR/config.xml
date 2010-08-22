@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget  xmlns="http://www.w3.org/ns/widgets"
+          xmlns:JIL="http://www.jil.org/ns/widgets1.2"
+         xmlns:its="http://www.w3.org/2005/11/its"
+         id="http://jil.org/wid/a8ecbadfea5a23acead14a44c7901ffa9014e420c8c278268c5cbe63e8d94d7e/XHR+Example"
+         version="1.0"
+         height="684"
+         width="480">
+    <JIL:access network="true" localfs="false" remote_scripts="false"/>
+    <JIL:billing required="false"/>
+    <icon src="Icon.png"/>
+    <content src="index.html"/>
+    <name>XHR Example</name>
+    <description>A simple widget example of using xmlHTTPRequest with and without jQuery</description>
+    <license  href="http://www.opensource.org/licenses/mit-license.php">MIT</license>
+    <author  email="widgets@tinyhippos.com">Dan</author>
+</widget>

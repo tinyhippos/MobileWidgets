@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+        <title>XHR example</title>
+        <link href="css/styles.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="js/thirdparty/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="js/Helpers.js"></script>
+        <script type="text/javascript" src="js/xhr.js"></script>
+    </head>
+    <body>
+        <div class="layout">
+            <div id="xhr-request-container">
+                <!--<label for="url">Enter URL:</label> <input id="url" type="url"><br/>-->
+                <button id="jQueryRequest" onmousedown="network.getContentWithJQuery();">Get using jQuery!</button>
+                <button id="xhrRequest" onmousedown="network.getContentWithXHR();">Get using XMLHttpRequest!!</button>
+            </div>
+            <div id="xhr-result"></div>
+        </div>
+    </body>
+</html>
