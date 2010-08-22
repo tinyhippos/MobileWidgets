@@ -1,6 +1,6 @@
 var nameSpace = nameSpace || {};
 
-(nameSpace.NetworkManager = function (jQuery){
+(nameSpace.CreateNetworkManager = function (jQuery){
     var url = "http://www.google.com";
 
     var callback = null;
@@ -45,7 +45,9 @@ var nameSpace = nameSpace || {};
     };
 });
 
-var network = new nameSpace.NetworkManager($);
-network.registerCallback(function(method) {
-    document.getElementById("xhr-result").innerHTML = "Great Success using: " + method + "!";
+window.addEventListener("load", function() {
+    nameSpace.NetworkManager = new nameSpace.CreateNetworkManager($);
+    nameSpace.NetworkManager.registerCallback(function(method) {
+        document.getElementById("xhr-result").innerHTML = "Great Success using: " + method + "!";
+    });
 });
