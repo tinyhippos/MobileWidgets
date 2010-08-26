@@ -108,7 +108,7 @@ var nameSpace = nameSpace || {};
 		catch (e){
 			nameSpace.Helpers.handleException(e);
 		}
-	});
+	}, false);
 
 	// public properties/methods
 	return {};
