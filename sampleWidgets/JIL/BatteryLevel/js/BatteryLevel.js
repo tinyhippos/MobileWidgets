@@ -1,28 +1,29 @@
 var nameSpace = nameSpace || {};
 
-(nameSpace.BatteryLevel = function() {
+(nameSpace.BatteryLevel = (() => {
+    // private properties/methods
+    var lastState;
 
-	// private properties/methods
-	var lastState,
-		batteryContainerNode,
-		batteryChargeLevelNode,
-		batteryChargeTextNode,
-		CHARGING = "charging",
-		FULL = "full",
-		DISCHARGING = "discharging",
-		setIntervalId,
-		animationLevel = 0;
+    var batteryContainerNode;
+    var batteryChargeLevelNode;
+    var batteryChargeTextNode;
+    var CHARGING = "charging";
+    var FULL = "full";
+    var DISCHARGING = "discharging";
+    var setIntervalId;
+    var animationLevel = 0;
 
-	function updateChargeLevel(percentRemaining) {
-		// set height in % on div
-		var currentPower = percentRemaining || Widget.Device.PowerInfo.percentRemaining,
-			color = percentRemaining <= 10 ? "#FF0000" : "#00FF00";
+    function updateChargeLevel(percentRemaining) {
+        // set height in % on div
+        var currentPower = percentRemaining || Widget.Device.PowerInfo.percentRemaining;
 
-		batteryChargeLevelNode.setAttribute("style", "background-color: " + color + "; height: " + currentPower + "%;");
-		batteryChargeTextNode.setAttribute("style", "color: " + color + ";");
-	}
+        var color = percentRemaining <= 10 ? "#FF0000" : "#00FF00";
 
-	function animateChargeLevel() {
+        batteryChargeLevelNode.setAttribute("style", "background-color: " + color + "; height: " + currentPower + "%;");
+        batteryChargeTextNode.setAttribute("style", "color: " + color + ";");
+    }
+
+    function animateChargeLevel() {
 		var modulus = animationLevel % 20;
 		updateChargeLevel(animationLevel);
 		if(animationLevel >= 100) {
@@ -30,8 +31,8 @@ var nameSpace = nameSpace || {};
 		}
 		animationLevel += (modulus === 0 ? 20 : 20 - modulus);
 	}
-	
-	function switchState(state) {
+
+    function switchState(state) {
 		try{
 			var currentPower = Widget.Device.PowerInfo.percentRemaining;
 
@@ -79,8 +80,8 @@ var nameSpace = nameSpace || {};
 			nameSpace.Helpers.handleException(e);
 		}
 	}
-	
-	function initialize() {
+
+    function initialize() {
 
 		// register for whevenever the charge level changes
 		Widget.Device.PowerInfo.onChargeLevelChange = updateChargeLevel;
@@ -100,8 +101,8 @@ var nameSpace = nameSpace || {};
 		//Widget.Device.PowerInfo.onLowBattery = function(percentRemaining) { }
 	}
 
-	// register for window loaded
-	window.addEventListener("load", function() {
+    // register for window loaded
+    window.addEventListener("load", () => {
 		try{
 			initialize();
 		}
@@ -110,7 +111,6 @@ var nameSpace = nameSpace || {};
 		}
 	}, false);
 
-	// public properties/methods
-	return {};
-	
-}());
+    // public properties/methods
+    return {};
+})());

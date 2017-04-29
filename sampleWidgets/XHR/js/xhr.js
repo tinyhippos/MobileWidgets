@@ -1,6 +1,6 @@
 var nameSpace = nameSpace || {};
 
-(nameSpace.CreateNetworkManager = function (jQuery){
+(nameSpace.CreateNetworkManager = jQuery => {
     var url = "http://rippledocs.tinyhippos.com";
 
     var callback = null;
@@ -8,8 +8,8 @@ var nameSpace = nameSpace || {};
     function _getDataWithJQuery() {
         jQuery.ajax({
             type: "GET",
-            url: url,
-            success: function(msg) {
+            url,
+            success(msg) {
                 if(typeof callback === "function") {
                     callback("jQuery");
                 }
@@ -21,7 +21,7 @@ var nameSpace = nameSpace || {};
         var xhr = new XMLHttpRequest();
 
         if(typeof callback === "function") {
-            xhr.onreadystatechange = function() {
+            xhr.onreadystatechange = () => {
                 if(xhr.readyState === 4) {
                     callback("XHR");
                 }
@@ -33,23 +33,23 @@ var nameSpace = nameSpace || {};
     }
 
     return {
-        registerCallback: function(cb) {
+        registerCallback(cb) {
             callback = cb;
         },
 
-        getContentWithJQuery: function() {
+        getContentWithJQuery() {
             _getDataWithJQuery();
         },
 
-        getContentWithXHR: function() {
+        getContentWithXHR() {
             _getDataWithXHR();
         }
     };
 });
 
-window.addEventListener("load", function() {
+window.addEventListener("load", () => {
     nameSpace.NetworkManager = new nameSpace.CreateNetworkManager($);
-    nameSpace.NetworkManager.registerCallback(function(method) {
+    nameSpace.NetworkManager.registerCallback(method => {
         document.getElementById("xhr-result").innerHTML = "Great Success using: " + method + "!";
     });
 });
